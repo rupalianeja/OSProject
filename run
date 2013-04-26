@@ -1,0 +1,11 @@
+#!/bin/bash 
+for i in 1 2 3 4 5
+do
+gcc "$1" -lm
+./a.out
+nvcc "$2" 
+./a.out
+done
+gnuplot 
+#plot "co-ordinates.dat" with lines
+exit 0
